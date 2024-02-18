@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired level of opacity */
+            z-index: 1;
+        }
+
+        #loginPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            border-color: aliceblue;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border-color: aliceblue;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #tagline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            padding-bottom: 0%;
+        }
+
+        .tag {
+            margin-top: 20px;
+            font-family: "Inter", serif;
+            font-size: 46px;
+            width: 100%;
+            line-height: 1.7;
+            font-weight: 400;
+            color: #424242;
+            margin-bottom: 0%;
+        }
+
+        .tagl {
+            margin-top: 0%;
+            font-family: "Inter", serif;
+            color: #424242;
+            font-size: 21px;
+        }
+
+        .logo {
+            background-color: #333;
+            color: #fff;
+            display: inline-block;
+        }
+
+        video:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body style="padding-bottom: 1000px;">
+    <div class="overlay" id="overlay"></div>
+
+    <div style="
+        background-color: #333333;
+        margin-top: 30px;
+        height: 50px;
+        border-color: gray;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    ">
+        <div style="
+            width: 100px;
+            color: white;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-left: 20px;
+        ">NestEgg</div>
+        <div style="
+            width: 100px;
+        ">
+            <button style="font-size: 22px;">Home</button>
+        </div>
+        <div style="
+            width: 100px;
+        ">
+            <button style="font-size: 22px;" onclick="showLoginPopup()">Login</button>
+        </div>
+    </div>
+
+
+    <!-- <div id="loginPopup">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button onclick="showForgotPassword()">Forgot Password?</button>
+
+        <div id="forgotPassword" style="display: none;">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+
+            <button onclick="showRegister()">Register</button>
+        </div>
+
+        <button onclick="hideLoginPopup()">Close</button>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <video autoplay loop src="done.mp4" width="550">
+    </div>
+
+    <div id="tagline">
+        <p class="tag">Invest in your future</p>
+    </div>
+
+    <div id="tagline">
+        <p class="tagl">Secure Your Nest with NestEgg.com</p>
+    </div>
+
+    <script>
+        function showLoginPopup() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("loginPopup").style.display = "block";
+        }
+
+        function hideLoginPopup() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("loginPopup").style.display = "none";
+        }
+
+        function showForgotPassword() {
+            document.getElementById("forgotPassword").style.display = "block";
+        }
+
+        function showRegister() {
+            
+        }
+    </script>-->
+
+    <div id="loginPopup">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    
+        <button onclick="showForgotPassword()">Forgot Password?</button>
+    
+        <div id="forgotPassword" style="display: none;">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+    
+            <button onclick="showRegister()">Register</button>
+        </div>
+    
+        <div id="register" style="display: none;">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" name="regEmail" required>
+    
+            <label for="phone">Phone No:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="regName">Name:</label>
+            <input type="text" id="regName" name="regName">
+    
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" name="regPassword" required>
+    
+            <button onclick="hideLoginPopup()">Close</button>
+        </div>
+    
+        <button onclick="hideLoginPopup()">Close</button>
+    </div>
+    
+    <div style="display: flex; justify-content: center;">
+        <video autoplay loop src="done.mp4" width="550">
+    </div>
+    
+    <div id="tagline">
+        <p class="tag">Invest in your future</p>
+    </div>
+    
+    <div id="tagline">
+        <p class="tagl">Secure Your Nest with NestEgg.com</p>
+    </div>
+    
+    <script>
+        function showLoginPopup() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("loginPopup").style.display = "block";
+        }
+    
+        function hideLoginPopup() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("loginPopup").style.display = "none";
+        }
+    
+        function showForgotPassword() {
+            document.getElementById("forgotPassword").style.display = "block";
+        }
+    
+        function showRegister() {
+            document.getElementById("forgotPassword").style.display = "none";
+            document.getElementById("register").style.display = "block";
+        }
+    </script>
+    
+</body>
+</html>
